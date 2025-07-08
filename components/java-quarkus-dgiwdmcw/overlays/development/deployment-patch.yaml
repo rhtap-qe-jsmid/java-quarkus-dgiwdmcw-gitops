@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
-metadata:   
-  annotations:  
+metadata:
+  annotations:
     tad.gitops.set/image: ".spec.template.spec.containers[0].image"
     tad.gitops.get/image: ".spec.template.spec.containers[0].image"
     tad.gitops.set/replicas: ".spec.replicas"
-    tad.gitops.get/replicas: ".spec.replicas" 
+    tad.gitops.get/replicas: ".spec.replicas"
   name: java-quarkus-dgiwdmcw
 spec:
-  replicas: 1 
-  template: 
+  replicas: 1
+  template:
     spec:
       containers:
-      - image: quay.io/redhat-appstudio/rhtap-task-runner:latest
-        name: container-image  
+        - image: tssc-quay-quay-tssc-quay.apps.cluster-fhj8w.fhj8w.sandbox2412.opentlc.com/tssc/java-quarkus-dgiwdmcw:f735f8bc9f2cc611351850eb00a8942cc3395997@sha256:2c1baf0237bd89266a5a3bb38f3dd498d2b089296a047c5b1ac98a6492a94873
+          name: container-image
